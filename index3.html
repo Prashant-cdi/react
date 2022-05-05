@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="root2"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+function Welcome(props) {
+    return <h1>Welcome to our company, {props.name}</h1>
+}
+
+function WelcomePerson(props) {
+    return <h1>Codedrill welcomes you, {props.name}</h1>
+}
+
+const element = <Welcome name="Codedrill"/>
+
+ReactDOM.render(element,document.getElementById("root"));
+
+const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+
+const element2 = <WelcomePerson name="Himanshu"/>
+
+root2.render(element2);
+    
+</script>
+
+</body>
+</html>
+
+
